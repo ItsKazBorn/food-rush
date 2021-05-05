@@ -8,7 +8,6 @@ public class BatataMovement : MonoBehaviour
     
     public float speed = 3;
 
-    private bool spawning = true;
     private float xBounds = 16;
     private float yBounds = 6;
 

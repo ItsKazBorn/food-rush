@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3616942441615718726}
   m_Layer: 8
   m_Name: Hamburger
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,6 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3b94664e3b90ca41842fa1ef83e8cb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 10
   speed: 5
 --- !u!1 &5516247691953616845
 GameObject:

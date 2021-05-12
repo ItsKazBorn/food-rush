@@ -5,6 +5,7 @@ using UnityEngine;
 public class BulletBehaviour : MonoBehaviour
 {
     public float speed;
+    public float damage = 10f;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +29,7 @@ public class BulletBehaviour : MonoBehaviour
         Debug.Log("Collision detected");
         if (collision.gameObject.layer == 8) {
             Debug.Log("Collided with enemy");
-            Destroy(collision.gameObject);
+            collision.gameObject.GetComponent<Enemy>().TakeDamage(damage);
             Destroy(gameObject);
         }
     }

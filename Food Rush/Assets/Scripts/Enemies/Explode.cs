@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Explode : MonoBehaviour
 {
-
     public float radius = 3f;
     public ParticleSystem explosionEffect;
     public float force = 10f;

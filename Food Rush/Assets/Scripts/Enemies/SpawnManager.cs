@@ -10,7 +10,6 @@ public class SpawnManager : MonoBehaviour
 
     public GameObject[] spawnPointsFryer;
     public GameObject[] fryerEnemies;
-
     
     public float spawnTimeOven = 5;
     public float spawnTimeFryer = 15;
@@ -22,14 +21,11 @@ public class SpawnManager : MonoBehaviour
     {
         InvokeRepeating("SpawnRandomOvenEnemy", startDelay, spawnTimeOven);
         InvokeRepeating("SpawnRandomFryerEnemy", startDelay, spawnTimeFryer);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         
+        // CancelInvoke Stops ALL invoke repeatings in class
+        //CancelInvoke();
     }
-
+    
     void SpawnRandomOvenEnemy()
     {
         int randomPoint = Random.Range(0, spawnPointsOven.Length);

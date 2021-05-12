@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: -1061959141621681702}
   m_Layer: 8
   m_Name: Pizza Slice
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -142,8 +142,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 421ab4cf81eb64d42842acfff6079138, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 2994849011603140517}
+  health: 10
   speed: 7
+  sprite: {fileID: 2994849011603140517}
 --- !u!54 &-1061959141621681702
 Rigidbody:
   m_ObjectHideFlags: 0

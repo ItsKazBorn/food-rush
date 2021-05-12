@@ -1,13 +1,32 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public float health = 10f;
+    // Components
+    protected Transform _transform;
+    
+    // Health
+    [SerializeField] private float health = 10f;
 
+    // Movement
+    [SerializeField] private float speed = 3;
+    protected float xBounds = 16;
+    protected float yBounds = 6;
+    protected Vector3 direction;
 
-
+    protected virtual void Start()
+    {
+        _transform = transform;
+    }
+    
+    protected virtual void Update()
+    {
+        ChangeDirection();
+        _transform.Translate(direction * (speed * Time.deltaTime));
+    }
 
     public void TakeDamage(float damage)
     {
@@ -16,20 +35,12 @@ public class Enemy : MonoBehaviour
             Die();
     }
 
-    public void Die()
+    protected virtual void Die()
     {
         Destroy(gameObject);
     }
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    protected virtual void ChangeDirection() { }
+
+
 }

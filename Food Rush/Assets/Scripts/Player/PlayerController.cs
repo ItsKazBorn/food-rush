@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    public float TakeDamage(float damage)
+    public void TakeDamage(float damage)
     {
         
     }
